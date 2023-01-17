@@ -9,4 +9,4 @@ jobs:
         run: echo "Hello World!"
       - name: Clone-and-build
         uses: actions/checkout@v2 
-        run: ci/build-app.sh
+      - run: ci/build-app.sh
