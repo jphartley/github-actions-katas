@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
-        run: echo "I love you Jeremy"
+        #run: echo "I love you Jeremy"
       - name: finish-step
         run: echo "Let's finish nice shall we, Jeremy"
         run: echo "OK! Good Night"
