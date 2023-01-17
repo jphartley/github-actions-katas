@@ -7,11 +7,21 @@ jobs:
     steps:
       - name: Clone-and-build
         uses: actions/checkout@v2 
+      - name: Upload Repo
+        uses: actions/upload-artifact@v2
+        with:
+          name: jeremy-artifact
+          path: .
   build:
     needs: clone-down
     runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps:
+      - name: Download repo
+        uses: actions/download-artifact@v2
+        with:
+          name: jeremy-artifact
+          path: .    
       - name: build-application
         run: ci/build-app.sh
       - name: test
@@ -21,8 +31,3 @@ jobs:
         with:
           name: jeremy-artifact
           path: .
-#      - name: Download a single artifact
-#        uses: actions/download-artifact@v2
-#        with:
-#          name: jeremy-artifact
-#          path: path/to/download/artifact/
