@@ -10,3 +10,5 @@ jobs:
       - name: Clone-and-build
         uses: actions/checkout@v2 
       - run: ci/build-app.sh
+      - name: test
+      - run: ci/unit-test-app.sh
