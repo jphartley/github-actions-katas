@@ -3,12 +3,11 @@ on: push
 jobs:
   jeremy-job:
     runs-on: ubuntu-latest
+    container: gradle:6-jdk11
     steps:
       - name: my-step
-        run: |
-              echo "Hello World!"
-              echo "I love you Jeremy"
-      - name: finish-step
-        run: | 
-              echo "Let's finish nice shall we, Jeremy"
-              echo "OK! Good Night"
+        run: echo "Hello World!"
+      - name: Clone-down
+        uses: actions/checkout@v2 
+      - name: build-app
+        run: ci/build-app.sh
