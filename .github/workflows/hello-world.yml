@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: my-step
         run: |
-        echo "Hello World!"
-        echo "I love you Jeremy"
+              echo "Hello World!"
+              echo "I love you Jeremy"
       - name: finish-step
         run: | 
-               echo "Let's finish nice shall we, Jeremy"
-               echo "OK! Good Night"
+              echo "Let's finish nice shall we, Jeremy"
+              echo "OK! Good Night"
