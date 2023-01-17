@@ -5,10 +5,21 @@ jobs:
     runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+#      - name: my-step
+#        run: echo "Hello World!"
       - name: Clone-and-build
         uses: actions/checkout@v2 
-      - run: ci/build-app.sh
+      - name: build-application
+        run: ci/build-app.sh
       - name: test
         run: ci/unit-test-app.sh
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: jeremy-artifact
+          path: .
+#      - name: Download a single artifact
+#        uses: actions/download-artifact@v2
+#        with:
+#          name: jeremy-artifact
+#          path: path/to/download/artifact/
