@@ -9,5 +9,5 @@ jobs:
         #run: echo "I love you Jeremy"
       - name: finish-step
         run: echo "Let's finish nice shall we, Jeremy"
-        run: echo "OK! Good Night"
+        #run: echo "OK! Good Night"
     
