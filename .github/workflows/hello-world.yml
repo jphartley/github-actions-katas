@@ -7,7 +7,6 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
-      - name: Clone-down
+      - name: Clone-and-build
         uses: actions/checkout@v2 
-      - name: build-app
         run: ci/build-app.sh
