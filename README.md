@@ -1,7 +1,7 @@
 # Github Actions katas
 
 Look into the labs folder for exercises
-Jeremy is smart!
+Jeremy and Jorg are both smart!
 
 ## Resources
 
